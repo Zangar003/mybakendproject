@@ -9,8 +9,7 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
-import dj_database_url
-import django_heroku
+
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -86,12 +85,7 @@ DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.sqlite3',
          'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'NAME': 'd5q8kfqp9ng3p2',
-        #  'USER':'dmxvcztcsgefko',
-        #  'PASSWORD':'4df44a65697f89c5abf4d084aeb96167db50819ee0e8a197250bae8ce500d546',
-        #  'HOST':'ec2-3-229-252-6.compute-1.amazonaws.com',
-        #  'PORT':'5432',
+
     }
 }
 
@@ -153,7 +147,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = '200103376@stu.sdu.edu.kz'
 EMAIL_HOST_PASSWORD = 'zangar2003'
 EMAIL_USE_SSL = False
-django_heroku.settings(locals())
+
 
 
 
