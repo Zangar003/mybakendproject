@@ -1,0 +1,43 @@
+<!Doctype html>
+<head>
+    <style>
+        .form-label{
+            display:flex;
+            justify-content:center;
+
+        }
+        .style{
+            border:2px solid green;
+        }
+        .btn{
+          margin-left:780px;
+          width:150px;
+          height:80px;
+          background-color:green;
+          border : 1px solid;
+          color:white;
+          border-radius:5px;
+        }
+        .h1{
+            text-align:center;
+        }
+
+    </style>
+
+</head>
+<body>
+{%  block content %}
+<h1 class ="h1">{{title}}</h1>
+
+<form action="{% url 'add_page' %}" method="post">
+    {% csrf_token %}
+    <div class="form-error">{{form.non_field_errors}}</div>
+    {% for i in form %}
+       <p class = "form-label "><label class = "form-label style" for ="{{i.id_for_label }}">{{i.label}}:</label>{{i}}</p>
+    <div class="form-eror">{{i.errors}}</div>
+
+    {% endfor%}
+    <button class="btn" type = "submit">Submit</button>
+</form>
+{% endblock %}
+</body>

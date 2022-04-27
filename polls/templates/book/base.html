@@ -1,0 +1,17 @@
+{% load poll_extras%}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% get_categories as get2 %}
+    {%for i in get2 %}
+        <p>{{i.questiopn_text}}</p>
+        <p>{{i.pub_date}}</p>
+    {% endfor %}
+
+    {% show_categories %}
+
+</body>
+</html>

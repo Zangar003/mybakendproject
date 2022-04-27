@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .conteiner{
+            background-color: white;
+            width: 400px;
+            height:auto;
+            border:1px solid;
+            display: flex;
+            justify-content:center;
+            margin:100px 100px 100px  550px;
+            border-radius:10px;
+        }
+        .text{
+            margin:70px;
+            font-size:20px;
+        }
+        .text1{
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+        }
+        .input{
+            display:flex;
+            margin:6px;
+            width: 230px;
+            height: 40px;
+            border:2px solid red;
+            border-radius:5px;
+
+        }
+
+    </style>
+</head>
+<body style ="background-image: url(https://mobimg.b-cdn.net/v3/fetch/46/46b604f54bbc8a98b54f23d88b230140.jpeg)">
+    <div class ="conteiner">
+
+        <form method="post">
+            <h3 class ="text1">Sign In</h3>
+    {% csrf_token %}
+
+        <label class ="text">Username</label>
+        <input class ="input" type="text" id ="username" name ="username" placeholder="Enter your username" required>
+        <br>
+        <label class ="text">Password</label>
+        <input  class ="input"type="password" id ="password" name ="password" placeholder="Enter your password" required>
+        <br>
+        <button class ="text1" type ="Submit">Sign IN</button>
+    </form>
+    </div>
+</body>
+</html>
